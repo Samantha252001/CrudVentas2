@@ -5,21 +5,21 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CustomerComponent } from './feature/customer/customer.component';
+import { AsesorComponent } from './ventas/asesor/asesor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CustomerComponent
+    AsesorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
