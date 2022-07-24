@@ -6,5 +6,5 @@ export interface Customer {
   email:string,
   created: Date,
   updated: Date,
-  enabled: boolean
+  enable: boolean
 }

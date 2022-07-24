@@ -17,7 +17,7 @@ export class CustomerComponent implements OnInit {
     email: "",
     created: new Date(),
     updated: new Date(),
-    enabled: true
+    enable: true
   };
 
   constructor(
@@ -53,7 +53,7 @@ export class CustomerComponent implements OnInit {
           email: "",
           created: new Date(),
           updated: new Date(),
-          enabled: true
+          enable: true
         };
       }
     )
@@ -82,7 +82,7 @@ export class CustomerComponent implements OnInit {
           email: "",
           created: new Date(),
           updated: new Date(),
-          enabled: true
+          enable: true
         };
       }
     )
