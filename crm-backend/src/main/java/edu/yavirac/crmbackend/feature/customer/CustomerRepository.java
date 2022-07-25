@@ -8,4 +8,6 @@ public interface CustomerRepository extends CrudRepository<Customer , Long> {
     
     List<Customer> findAll();
 
+    List<Customer> findByNameLikeIgnoreCase(String term);
+
 }

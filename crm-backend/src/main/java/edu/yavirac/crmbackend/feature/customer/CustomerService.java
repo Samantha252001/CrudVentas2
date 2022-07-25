@@ -28,8 +28,12 @@ public class CustomerService {
         customerRepository.deleteById(id);
     }
 
-    public  List<Customer> findAll(){
+    public List<Customer> findAll(){
         return customerRepository.findAll();
+    }
+
+    public List<Customer> findByName(String term){
+        return customerRepository.findByNameLikeIgnoreCase(term);
     }
     
 }

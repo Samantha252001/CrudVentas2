@@ -43,10 +43,14 @@ public class CustomerController {
         customerService.deleteById(id);
     }
 
-    @GetMapping("/all")
-    public List<Customer> findAll(){
+    @GetMapping("/findAll")
+    public List findAll(){
         return customerService.findAll();
     }
     
-    
+    @GetMapping("/findByName/{term}")
+    public List<Customer> findByName(@PathVariable String term){
+        return customerService.findByName(term+"%");
+    }
+
 }
