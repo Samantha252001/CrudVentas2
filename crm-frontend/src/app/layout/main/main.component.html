@@ -1,0 +1,17 @@
+<div class="sm:w-11/12 sm:mx-auto">
+  <app-header></app-header>
+</div>
+
+
+<div class="drawer drawer-mobile sm:w-11/12 sm:mx-auto h-[90%]">
+    <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
+    <div class="drawer-content items-center bg-white mx-2 rounded-md shadow-sm shadow-black">
+      <!-- Page content here -->
+      <router-outlet></router-outlet>
+    </div>
+    <div class="drawer-side">
+      <label for="my-drawer-2" class="drawer-overlay"></label>
+      <app-sidebar></app-sidebar>
+
+    </div>
+  </div>
