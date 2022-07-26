@@ -1,9 +1,4 @@
-//es la clase especial donde va a escuchar las rutas especificas para
-//prosesar peticiones para ciertas entidades. lo que hace una clase 
-//en java spring que pueda escuchar todo lo que tiene que ver con Rest
-//es que se note con restcontroller
-
-package edu.yavirac.crmbackendproyectointegrador.Ventas.AsesorComercial;
+package edu.yavirac.crmbackend.feature.asesor;
 
 import java.util.List;
 
@@ -26,6 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/asesor")
 public class AsesorController {
 
+    
     @Autowired
     AsesorService asesorService;
 
@@ -59,7 +55,7 @@ public class AsesorController {
         return "Registro eliminado";
     }
 
-    @GetMapping("/findall")
+    @GetMapping("/findAll")
     public List<Asesor> findAll() {
         return asesorService.findAll();
     }

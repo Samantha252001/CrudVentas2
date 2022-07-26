@@ -1,4 +1,4 @@
-package edu.yavirac.crmbackendproyectointegrador.Ventas.AsesorComercial;
+package edu.yavirac.crmbackend.feature.asesor;
 
 import org.springframework.data.annotation.Id;
 
@@ -9,7 +9,8 @@ public class AsesorAuthority {
 
     @Id
     private long id;
-    private Long personId;
+    private Long vendedorId;
     private Long authorityId;
     
 }
+

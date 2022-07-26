@@ -1,14 +1,13 @@
-//ASESOR ES UNA ENTIDAD O DOMINIO ES UNA REPRESENTACION DE NUESTRA 
-//BASE DE DATOS LO IMPORTANTE DE ESTA ENTIDAD ES QUE PUDIERAMOS 
-//ASEGURARNOS DE QUE SI EL NOMBRE EN LA CLASE EN JAVA FUERA DISTINTO 
-// A LA TABLA EN BASE DE DATOS EN POSTGRES SE LO HACE CON LA ANOTACION 
 
-package edu.yavirac.crmbackendproyectointegrador.Ventas.AsesorComercial;
+package edu.yavirac.crmbackend.feature.asesor;
 
-import java.sql.Timestamp;
+import java.security.Timestamp;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
+import org.springframework.data.relational.core.mapping.MappedCollection;
 import org.springframework.data.relational.core.mapping.Table;
 
 import lombok.Data;
@@ -25,9 +24,14 @@ public class Asesor {
     private String telefono;
     private String correo;
     @Column("equipo_ventas_id")
-    private String equipoVentasId;
+    private long  equipoVentasId;
     private Timestamp created;//fecha de creacion
     private Timestamp updated;//fecha de actualizacion
     private boolean  enable;//si esta activo o no el registro
+
+    //funciona nuestros geteres y seteres 
+    @MappedCollection(idColumn = "vendedor_id")
+    private Set<AsesorAuthority> equipo = new HashSet<>();
     
 }
+

@@ -1,13 +1,13 @@
-package edu.yavirac.crmbackendproyectointegrador;
+package edu.yavirac.crmbackend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CrmBackendProyectoIntegradorApplication {
+public class CrmBackendApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CrmBackendProyectoIntegradorApplication.class, args);
+		SpringApplication.run(CrmBackendApplication.class, args);
 	}
 
 }

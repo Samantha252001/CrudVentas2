@@ -1,4 +1,4 @@
-package edu.yavirac.crmbackendproyectointegrador.Ventas.equipoVentas;
+package edu.yavirac.crmbackend.feature.equipo;
 
 import java.util.List;
 
@@ -11,14 +11,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/equipoVentas")
 @CrossOrigin({"*"})
-public class EquipoVentasController {
-    
+
+public class EquipoController {
+
     @Autowired
-    EquipoVentasService equipoVentasService;
+    EquipoService equipoService;
 
     @GetMapping("/findAll")
-    public List<EquipoVentas> findAll(){
-        return equipoVentasService.findAll();
+    public List<Equipo> findAll(){
+        return equipoService.findAll();
     }
 
+    
+    
 }

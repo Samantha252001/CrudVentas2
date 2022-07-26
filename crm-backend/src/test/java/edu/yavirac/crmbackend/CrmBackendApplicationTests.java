@@ -1,10 +1,10 @@
-package edu.yavirac.crmbackendproyectointegrador;
+package edu.yavirac.crmbackend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CrmBackendProyectoIntegradorApplicationTests {
+class CrmBackendApplicationTests {
 
 	@Test
 	void contextLoads() {

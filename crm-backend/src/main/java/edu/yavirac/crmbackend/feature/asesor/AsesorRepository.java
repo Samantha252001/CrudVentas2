@@ -1,9 +1,8 @@
-package edu.yavirac.crmbackendproyectointegrador.Ventas.AsesorComercial;
+package edu.yavirac.crmbackend.feature.asesor;
 
 import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
-
 
 public interface AsesorRepository extends CrudRepository<Asesor, Long>{
     

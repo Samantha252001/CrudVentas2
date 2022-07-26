@@ -5,12 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         
+            
         {
             "type": "java",
-            "name": "Launch CrmBackendProyectoIntegradorApplication",
+            "name": "Launch CrmBackendApplication",
             "request": "launch",
-            "mainClass": "edu.yavirac.crmbackendproyectointegrador.CrmBackendProyectoIntegradorApplication",
-            "projectName": "crm-backend-proyecto-integrador"
+            "mainClass": "edu.yavirac.crmbackend.CrmBackendApplication",
+            "projectName": "crm-backend"
         }
     ]
 }
