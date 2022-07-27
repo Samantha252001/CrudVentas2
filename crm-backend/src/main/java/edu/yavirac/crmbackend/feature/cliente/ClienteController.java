@@ -1,4 +1,4 @@
-package edu.yavirac.crmbackend.feature.auth;
+package edu.yavirac.crmbackend.feature.cliente;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,42 +15,42 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/authority")
 @CrossOrigin({"*"})
-public class AuthorityController {
+public class ClienteController {
 
     @Autowired
-    AuthorityService authorityService;
+    ClienteService clienteService;
 
     @PostMapping("/save")
-    public Authority save(@RequestBody Authority authority){
-        return authorityService.save(authority);
+    public Cliente save(@RequestBody Cliente cliente){
+        return clienteService.save(cliente);
     }
 
     @GetMapping("/findById/{id}")
-    public Authority findById(@PathVariable long id){
-        return authorityService.findById(id);
+    public Cliente findById(@PathVariable long id){
+        return clienteService.findById(id);
     }
 
     @PutMapping("/update")
-    public Authority update(@RequestBody Authority authority){
-        return authorityService.save(authority);
+    public Cliente update(@RequestBody Cliente cliente){
+        return clienteService.save(cliente);
     }
 
     @DeleteMapping("/delete/{id}")
     public void deleteById(@PathVariable long id)
     {
-        authorityService.deleteById(id);
+        clienteService.deleteById(id);
     }
 
    
     @GetMapping("/all")
-    public List<Authority> findAll(){
-        return authorityService.findAll();
+    public List<Cliente> findAll(){
+        return clienteService.findAll();
     }
     
     @GetMapping("/findByName/{term}")
-    public List<Authority> findByName(@PathVariable String term){
+    public List<Cliente> findByName(@PathVariable String term){
         System.out.println("Backend:"+term);
-        return authorityService.findByName(term);
+        return clienteService.findByName(term);
     }
     
 }

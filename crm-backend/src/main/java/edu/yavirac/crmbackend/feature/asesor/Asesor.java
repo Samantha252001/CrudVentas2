@@ -31,7 +31,7 @@ public class Asesor {
 
     //funciona nuestros geteres y seteres 
     @MappedCollection(idColumn = "vendedor_id")
-    private Set<AsesorAuthority> equipo = new HashSet<>();
+    private Set<AsesorEquipos> equipo = new HashSet<>();
     
 }
 
