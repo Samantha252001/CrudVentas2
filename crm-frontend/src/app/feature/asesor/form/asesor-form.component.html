@@ -1,0 +1,134 @@
+<app-asesor-toolbar [item]="currentAsesor.nombre"></app-asesor-toolbar>
+
+<div class="grid justify-center mt-4 gap-4">
+  <div
+    class="card card-compact bd-base-500 shadow-2xl shadow-fuchsia-500 w-96 glass"
+  >
+    <div class="card-body">
+      <h2 class="card-title font-bold uppercase justify-center">
+        Asesor <span class="text-primary">Comercial</span>
+      </h2>
+      <div>
+        <label for="">Nombre:</label>
+        <input
+          type="text"
+          placeholder="Ejemplo:Pedro Roman"
+          class="input input-bordered input-secondary w-full max-w-xs"
+          [(ngModel)]="currentAsesor.nombre"
+        /><!--este es el codigo con el que se enlasa el input con el controlador-->
+
+        <label for="">Telefono:</label>
+        <input
+          type="text"
+          placeholder="0980410485"
+          class="input input-bordered input-secondary w-full max-w-xs"
+          [(ngModel)]="currentAsesor.telefono"
+        />
+
+        <label for="">Correo:</label>
+        <input
+          type="email"
+          placeholder="ejemplo@gmail.com"
+          class="input input-bordered input-secondary w-full max-w-xs"
+          [(ngModel)]="currentAsesor.correo"
+        />
+
+        <label for="">Equipo de Ventas Id:</label>
+        <input
+          type="number"
+          placeholder="1526896#"
+          class="input input-bordered input-secondary w-full max-w-xs"
+          [(ngModel)]="currentAsesor.equipoVentasId"
+        />
+
+        <label for="">Created:</label>
+        <input
+          type="date"
+          class="input input-bordered input-secondary w-full max-w-xs"
+          [(ngModel)]="currentAsesor.created"
+        />
+        /
+        <label for="">Updated:</label>
+        <input
+          type="date"
+          placeholder="Fecha de actualizacion"
+          class="input input-bordered input-secondary w-full max-w-xs"
+          [(ngModel)]="currentAsesor.updated"
+        />
+
+        <!-- se coloca una clase para el activo -->
+        <div class="form-control">
+          <label class="label cursor-pointer justify-start">
+            <input
+              type="checkbox"
+              class="toggle toggle-secondary"
+              checked
+              [(ngModel)]="currentAsesor.enable"
+            />
+            <span class="label-text ml-4">Enable</span>
+          </label>
+        </div>
+
+        <app-persona-combobox
+          [idInput]="currentAsesor.id"
+          (currentPersonaId)="currentAsesor.id = $event"
+        ></app-persona-combobox>
+      </div>
+
+      <div class="divider my-0"></div>
+
+      <table class="table table-compact w-full">
+        <thead>
+          <tr>
+            <th>CLIENTES</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let auth of currentAsesor.clientes">
+            <!-- el NGFORse recorre un arreglo afin
+            de que se pueda dinamicamente crear el contenido que nosotros coloquemos dentro del Tr-->
+            <td>{{ auth.nombre }}</td>
+            <td>
+              <a (click)="removeCliente(auth.clienteId)">
+                <svg class="w-4 h-4" fill="red"
+                  xmlns="http://www.w3.org/2000/svg"
+                  id="Isolation_Mode"
+                  data-name="Isolation Mode"
+                  viewBox="0 0 24 24"
+                  width="512"
+                  height="512"
+                >
+                  <path
+                    d="M23,3H18V2.5A2.5,2.5,0,0,0,15.5,0h-
+                7A2.5,2.5,0,0,0,6,2.5V3H1V6H3V21a3,
+                3,0,0,0,3,3H18a3,3,0,0,0,3-3V6h2ZM18,21H6V6H18Z"
+                  />
+                  <rect x="8" y="9" width="3" height="9" />
+                  <rect x="13" y="9" width="3" height="9" />
+                </svg>
+              </a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <app-cliente-search (clienteEmiter)="onSelect($event)">
+              </app-cliente-search>
+            </td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="divider my-0"></div>
+
+      <div class="card-actions justify-end">
+        <!--aqui colocamos un evento que deice click y dentro de comillas esta el metodo que esta siendo referencia dentro del controlador-->
+        <button class="btn btn-circle ml-5 btn-sm" (click)="save()">
+          Guardar
+        </button>
+        <button class="btn btn-disabled ml-5 btn-sm">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<!--manu para consultar -->
+
+<div class=" dropdown dropdown-hover ">
+  <input #addInput class="input input-secondary input-sm"
+type="text" placeholder="Agregar cliente"
+(input)="findByName(addInput.value)"
+>
+
+<ul class="menu menu-compact dropdown-content bg-slate-500">
+  <li *ngFor="let item of clientes">
+    <a (click)="onSelect(item)"> {{item.nombre}}</a>
+
+
+  </li>
+</ul>
+
+</div>
+
+
+
+
+

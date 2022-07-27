@@ -28,10 +28,12 @@ public class Asesor {
     private Timestamp created;//fecha de creacion
     private Timestamp updated;//fecha de actualizacion
     private boolean  enable;//si esta activo o no el registro
+    private long clienteId;
+    private long id; //idperson
 
     //funciona nuestros geteres y seteres 
     @MappedCollection(idColumn = "vendedor_id")
-    private Set<AsesorEquipos> equipo = new HashSet<>();
-    
+    private Set<AsesorCliente> cliente = new HashSet<>();
+    //set es un conjunto
 }
 

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Asesor } from './asesor';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { identifierName } from '@angular/compiler';
+
 
 
 @Injectable({
@@ -39,4 +39,14 @@ export class AsesorService {
     return  this.http.delete<void>(this.url+"/deleteById/"+id, this.httpOptions)
 
   }
+
+  public findAll():Observable<Asesor[]>{
+    return this.http.get<Asesor[]>(this.url+"/findAll", this.httpOptions);
+}
+
+public findByName(term: string):Observable<Asesor[]>{
+  return this.http.get<Asesor[]>(this.url+"/findByName/"+term, this.httpOptions);
+
+}
+
 }

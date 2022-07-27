@@ -1,0 +1,17 @@
+ <!--cuando se seleccione en el select se colocara un identificador #
+                                                                  cuando cambie se quiere llamar a la funcion que se creo -->
+ <select #personaSelect class="select select-primary w-full max-w-xs" (change)="onChange(personaSelect.value)">
+  <option disabled selected>Seleccione la Persona</option>
+  <!--se en lasa con un ngfor y se crea una variable local -->
+  <option *ngFor="let persona of personas"
+  [value]="persona.id"
+  [selected]="persona.id === idInput"
+
+  >
+
+    {{persona.name}}
+<!-- al ngfor se lo define con un value xq se necesita definir con certesa
+cual es el value si no se define por defecto tomara los nombres  -->
+  </option>
+
+</select>

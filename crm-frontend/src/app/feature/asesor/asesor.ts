@@ -1,5 +1,7 @@
-import { Data } from "@angular/router";
-import { Timestamp } from "rxjs";
+
+import { Cliente } from "../cliente/cliente";
+
+
 
 export interface Asesor{
 
@@ -7,8 +9,11 @@ export interface Asesor{
   nombre: string,
   telefono: string,
   correo: string,
-  equipoVentasId: string,
+  equipoVentasId: number,
   created: string,
   updated: string,
   enable: boolean,
+  id: number,
+  clientes: Cliente[]
+
 }
