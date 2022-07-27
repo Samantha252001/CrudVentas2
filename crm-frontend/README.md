@@ -1,6 +1,6 @@
 # CrmFrontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.4.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.6.
 
 ## Development server
 
@@ -25,3 +25,17 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## Ayudas en diseño
+
+http://www.responsinator.com/
+
+## Soporte linux
+sudo sysctl -w fs.inotify.max_user_watches=524288
+cat /proc/sys/fs/inotify/max_user_watches
+
+
+## Iconos
+
+https://www.flaticon.es/

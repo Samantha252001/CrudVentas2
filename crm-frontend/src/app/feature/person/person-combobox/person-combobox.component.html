@@ -1,0 +1,9 @@
+<select #personSelect class="select w-full max-w-xs select-primary" (change)="onChange(personSelect.value)">
+    <option disabled selected>Creado por :</option>
+    <option *ngFor="let person of persons"
+    [value]="person.id"
+    [selected]="person.id === idInput"
+    >
+        {{person.name}}
+    </option>
+</select>

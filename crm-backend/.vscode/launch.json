@@ -6,10 +6,15 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch Crm",
+            "name": "Launch ProductosBackendApplication",
             "request": "launch",
-            "mainClass": "edu.yavirac.crmbackend.CrmBackendApplication",
-            "projectName": "crm-backend"
+            "mainClass": "edu.yavirac.productosbackend.ProductosBackendApplication",
+            "projectName": "productos-backend"
+        },
+        {
+            "name": "Dart & Flutter",
+            "request": "launch",
+            "type": "dart"
         }
     ]
 }

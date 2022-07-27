@@ -5,12 +5,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CustomerComponent } from './feature/customer/customer.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CustomerComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -22,4 +21,3 @@ import { CustomerComponent } from './feature/customer/customer.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-

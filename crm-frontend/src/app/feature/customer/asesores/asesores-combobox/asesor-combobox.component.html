@@ -1,9 +1,0 @@
-<select #asesorSelect class="select w-full max-w-xs select-primary" (change)="onChange(asesorSelect.value)">
-  <option disabled selected>Seleccione el Asesor</option>
-  <option *ngFor="let asesor of asesores"
-  [value]="asesor.id"
-  [selected]="asesor.id === idInput"
-  >
-      {{asesor.name}}
-  </option>
-</select>

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "crm-frontend": {
+    "productos-frontend": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/crm-frontend",
+            "outputPath": "dist/productos-frontend",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "crm-frontend:build:production"
+              "browserTarget": "productos-frontend:build:production"
             },
             "development": {
-              "browserTarget": "crm-frontend:build:development"
+              "browserTarget": "productos-frontend:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +75,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "crm-frontend:build"
+            "browserTarget": "productos-frontend:build"
           }
         },
         "test": {
@@ -99,6 +99,6 @@
     }
   },
   "cli": {
-    "analytics": "0607d906-d174-4120-bbfa-ca20a3538014"
+    "analytics": "52ef2740-0dd5-4fe1-859f-fb2c55ef2b02"
   }
 }
