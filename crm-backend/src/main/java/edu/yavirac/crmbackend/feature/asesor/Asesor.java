@@ -1,7 +1,8 @@
 
 package edu.yavirac.crmbackend.feature.asesor;
 
-import java.security.Timestamp;
+
+import java.sql.Timestamp;
 import java.util.HashSet;
 import java.util.Set;
 

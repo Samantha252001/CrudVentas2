@@ -8,7 +8,7 @@ public interface AsesorRepository extends CrudRepository<Asesor, Long>{
     
     List<Asesor> findAll();
 
-    List<Asesor> findByNameLikeIgnoreCase(String term);
+    List<Asesor> findByNombreLikeIgnoreCase(String term);
     
 
 }

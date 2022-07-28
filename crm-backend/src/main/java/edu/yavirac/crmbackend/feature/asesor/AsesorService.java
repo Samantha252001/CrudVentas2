@@ -45,7 +45,7 @@ public class AsesorService {
     }
 
     public List<Asesor> findByName(String term){
-        return asesorRepository.findByNameLikeIgnoreCase(term);
+        return asesorRepository.findByNombreLikeIgnoreCase(term);
     }
 
 }
