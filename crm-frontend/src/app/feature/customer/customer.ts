@@ -1,3 +1,5 @@
+import { Product } from "../product/product";
+
 export interface Customer {
   customerId: number,
   name: string,
@@ -6,5 +8,8 @@ export interface Customer {
   email:string,
   created: Date,
   updated: Date,
-  enable: boolean
+  enable: boolean,
+  vendedorId: number,
+  products: Product[]
+
 }

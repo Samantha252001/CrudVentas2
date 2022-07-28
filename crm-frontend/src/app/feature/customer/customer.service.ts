@@ -28,9 +28,17 @@ export class CustomerService {
       return this.http.get<Customer>(this.url+"/"+id, this.httpOptions);
     }
 
+    //Delete
     public deleteById(id: number): Observable<void>{
       console.log(id);
       return this.http.delete<void>(this.url+"/delete/"+id, this.httpOptions);
     }
 
-}
+    public findAll():Observable<Customer[]>{
+      return this.http.get<Customer[]>(this.url+"/findAll", this.httpOptions);
+    }
+
+    public findByName(term: string):Observable<Customer[]>{
+      return this.http.get<Customer[]>(this.url+"/findByName/"+term, this.httpOptions);
+    }
+  }
