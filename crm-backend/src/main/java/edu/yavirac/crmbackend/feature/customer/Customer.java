@@ -11,6 +11,7 @@ import org.springframework.data.relational.core.mapping.Table;
 
 import lombok.Data;
 
+
 @Data
 @Table("customers")
 public class Customer {
@@ -28,6 +29,6 @@ public class Customer {
     private Long vendedorId;
 
     @MappedCollection(idColumn="customer_id")
-    private Set<ProductoSugerido> productos = new HashSet<>();
+    private Set<ProductoSugerido> products = new HashSet<>();
 
 }
